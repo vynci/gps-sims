@@ -33,7 +33,7 @@ client.on('connect', function () {
             console.log(route[i]);
             i++;
         }
-    }, 3000);  
+    }, 1000);  
 })
  
 client.on('message', function (topic, message) {
