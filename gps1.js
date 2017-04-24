@@ -29,7 +29,7 @@ client.on('connect', function () {
         if(i >= 10){
             i = 0;
         } else{
-            client.publish('v1/messages/1001', route[i].lat + ',' + route[i].lng);  
+            client.publish('v1/messages/1001', JSON.stringify(route[i]));  
             console.log(route[i]);
             i++;
         }

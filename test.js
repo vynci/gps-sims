@@ -7,7 +7,7 @@ var client = mqtt.connect({
   password : '5738921e589fcb114312db62'
 });
 
-client.subscribe('v1/messages/#');
+client.subscribe('v1/messages/1003');
 
 client.on('connect', function () {
     console.log('connect');
@@ -15,5 +15,6 @@ client.on('connect', function () {
  
 client.on('message', function (topic, message) {
   // message is Buffer 
-  console.log(message.toString())
+  console.log('topic: ', topic.toString());
+  console.log('payload: ', message.toString());
 })
